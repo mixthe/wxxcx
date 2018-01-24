@@ -18,7 +18,7 @@ composer require mixthe/wxxcx
 或者添加如下信息到你的 `composer.json` 文件中 :
 
 ```json
-"Mixthe/wxxcx": "^1.0",
+"mixthe/wxxcx": "^1.0",
 ```
 
 然后注册服务提供者到 Laravel中 具体位置：`/config/app.php` 中的 `providers` 数组:
@@ -121,5 +121,5 @@ wx.login({
     }
 })
 ```
-
-> 如有bug，请在 [Issues](https://github.com/Mixthe/wxxcx/issues) 中反馈，非常感谢！
+> 源代码来源[https://github.com/lanceWan/wxxcx](https://github.com/lanceWan/wxxcx/issues) 
+> 如有bug，请在 [Issues](https://github.com/mixthe/wxxcx/issues) 中反馈，非常感谢！
