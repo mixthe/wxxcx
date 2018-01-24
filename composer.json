@@ -1,21 +1,14 @@
 {
     "name": "mixthe/wxxcx",
-    "description": "A WeChat applet (xiaochengxu) plugins for Laravel 5.",
+    "description": "A WeChat applet (xiaochengxu) plugins for Laravel or Lumen",
+    "type": "MIT",
     "license": "MIT",
     "authors": [
         {
-            "name": "mixthe",
-            "email": "205788105@qq.com"
+            "name": "kongjun",
+            "email": "kong007sss@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">=5.5.9",
-        "illuminate/support": "~5"
-    },
-    "autoload": { 
-        "psr-4": {
-            "Mixthe\\Wxxcx\\": "src/"
-        } 
-    }
+    "minimum-stability": "dev",
+    "require": {}
 }
