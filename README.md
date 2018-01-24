@@ -21,15 +21,24 @@ composer require mixthe/wxxcx
 "mixthe/wxxcx": "^1.0",
 ```
 
-然后注册服务提供者到 Laravel中 具体位置：`/config/app.php` 中的 `providers` 数组:
+laravel中注册服务提供者到 Laravel中 具体位置：`/config/app.php` 中的 `providers` 数组:
 
 ```php
 Mixthe\Wxxcx\WxxcxServiceProvider::class,
 ```
-发布配置文件: 
+lumen中注册服务提供者
+具体位置：`bootstrap/app.php`
+```php
+$app->register(\Mixthe\Wxxcx\WxxcxServiceProvider::class);
+```
 
+在laravel中发布配置文件
 ```bash
 php artisan vendor:publish --tag=wxxcx
+```
+在lumen中发布配置文件
+```bash
+php artisan wxxcx:publish-config
 ```
 命令完成后，会添加一个`wxxcx.php`配置文件到您的配置文件夹 如 : `/config/wxxcx.php`。
 
@@ -53,7 +62,6 @@ class WxxcxController extends Controller
 
     /**
      * 小程序登录获取用户信息
-     * @author 晚黎
      * @date   2017-05-27T14:37:08+0800
      * @return [type]                   [description]
      */
