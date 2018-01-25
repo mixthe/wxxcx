@@ -3,6 +3,7 @@ namespace Mixthe\Wxxcx;
 
 use Illuminate\Support\ServiceProvider;
 use Mixthe\Wxxcx\Console\PublishConfigCommand;
+use Laravel\Lumen\Application as LumenApplication;
 
 class WxxcxServiceProvider extends ServiceProvider
 {
@@ -27,6 +28,8 @@ class WxxcxServiceProvider extends ServiceProvider
             $this->publishes([
                 $config_file => config_path('wxxcx.php')
             ], 'wxxcx');
+        }elseif ($this->app instanceof LumenApplication) {
+            $this->app->configure('wxxcx');
         }
     }
 
