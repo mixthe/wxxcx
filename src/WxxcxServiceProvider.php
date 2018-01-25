@@ -4,6 +4,7 @@ namespace Mixthe\Wxxcx;
 use Illuminate\Support\ServiceProvider;
 use Mixthe\Wxxcx\Console\PublishConfigCommand;
 use Laravel\Lumen\Application as LumenApplication;
+use Illuminate\Foundation\Application as LaravelApplication;
 
 class WxxcxServiceProvider extends ServiceProvider
 {
@@ -24,7 +25,7 @@ class WxxcxServiceProvider extends ServiceProvider
         $config_file = __DIR__ . '/../config/config.php';
 
         $this->mergeConfigFrom($config_file, 'wxxcx');
-        if(function_exists('config_path')){
+        if($this->app instanceof LaravelApplication && $this->app->runningInConsole()){
             $this->publishes([
                 $config_file => config_path('wxxcx.php')
             ], 'wxxcx');
