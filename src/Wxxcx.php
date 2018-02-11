@@ -10,6 +10,8 @@ class Wxxcx
      * @var string
      */
     private $appId;
+    private $mchId;
+    private $key;
     private $secret;
     private $code2session_url;
     private $sessionKey;
@@ -22,6 +24,8 @@ class Wxxcx
     {
         $this->appId = config('wxxcx.appid', '');
         $this->secret = config('wxxcx.secret', '');
+        $this->mchId = config('wxxcx.mch_id', '');
+        $this->key = config('wxxcx.key', '');
         $this->code2session_url = config('wxxcx.code2session_url', '');
     }
 
